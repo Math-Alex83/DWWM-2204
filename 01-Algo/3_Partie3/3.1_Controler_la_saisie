@@ -1,0 +1,14 @@
+# VARIABLES
+
+STRING prenom <-- "" 
+
+
+# DEBUT DU PROGRAMME
+
+TANT QUE |prenom| < 2
+    ECRIRE "Quel est votre prenom? : "
+    LIRE prenom
+FIN TANT QUE
+
+
+# FIN DU PROGRAMME

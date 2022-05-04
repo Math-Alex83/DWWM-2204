@@ -1,0 +1,18 @@
+# VARIABLES
+
+# DEBUT DU PROGRAMME
+
+ECRIRE "Quel est le rayon du cercle? : "
+LIRE rayon
+
+ECRIRE "Quel est l'angle du secteur circulaire? (en degré(s)) : "
+LIRE angle
+
+REELE r <-- rayon
+DEG a <-- angle
+
+REELE aire <-- (pi * r^2 *a)/360
+
+ECRIRE "L'aire du secteur circulaire est : " , aire
+
+# FIN DU PROGRAMME

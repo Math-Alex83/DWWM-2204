@@ -1,0 +1,20 @@
+# VARIABLES
+
+ENTIER nb1 <-- A
+ENTIER div <-- A
+
+# DEBUT DU PROGRAMME
+
+LIRE nb1
+LIRE div
+
+TANT QUE div !=1
+    LIRE nb1
+    LIRE div
+    SI nb1 % div =0
+        ECRIRE div , " "
+    FIN SI
+    div <-- div - 1
+FIN TANT QUE
+
+# FIN DU PROGRAMME

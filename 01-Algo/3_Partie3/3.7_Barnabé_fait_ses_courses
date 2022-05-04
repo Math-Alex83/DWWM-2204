@@ -1,0 +1,29 @@
+# VARIABLES
+
+REELE solde <-- A
+ENTIER mag <-- 0
+
+# DEBUT DU PROGRAMME
+
+LIRE solde
+LIRE mag
+
+TANT QUE solde !=0
+    LIRE solde
+    LIRE mag
+
+    SI solde / 2 >= 1
+    ALORS
+        solde <-- solde / 2 + 1
+        mag <-- mag + 1
+    SINON
+        solde <-- solde - solde
+        mag <-- mag + 1
+    FIN SI
+FIN TANT QUE
+
+LIRE mag
+
+ECRIRE "Barnabé est allé dans " , mag , " magasin."
+
+# FIN DU PROGRAMME
