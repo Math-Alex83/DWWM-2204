@@ -1,0 +1,27 @@
+# VARIABLES
+
+ENTIER age <-- X
+ENTIER retraite <-- 60
+
+# DEBUT DU PROGRAMME
+
+LIRE age
+
+SI age > retraite
+ALORS 
+    ECRIRE "Vous etes a la retraite !"
+
+OU SI age = retraite
+ALORS
+    ECRIRE "Il est temps de prendre votre retraite !"
+
+OU SI age > 0 ET age < retraite
+ALORS 
+    ECRIRE "Il vous reste : ",retraite-age," ans, " avant la retraite !"
+
+SINON
+    ECRIRE "La valeur fournie n'est pas un àge valide !"
+
+FIN SI
+
+# FIN DU PROGRAMME

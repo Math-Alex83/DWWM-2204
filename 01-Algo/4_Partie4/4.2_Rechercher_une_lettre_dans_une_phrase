@@ -1,0 +1,44 @@
+# VARIABLES
+
+STRING chaine <-- TEXT
+ENTIER compteur <-- 0
+ENTIER occurence <-- 0
+STRING lettre <-- CARACTERE
+
+
+# DEBUT DU PROGRAMME
+
+LIRE chaine
+LIRE compteur
+LIRE occurence
+LIRE lettre
+
+POUR i = 0 à |chaine|-1
+    SI chaine[i] != " " ET chaine[i] != "."
+    ALORS
+        compteur <-- compteur + 1
+    FIN SI
+FIN POUR
+
+LIRE compteur
+
+SI compteur <= 0
+ALORS
+    ECRIRE "La chaîne est vide"
+SINON 
+    POUR i DANS chaine
+        SI i = lettre
+        ALORS
+            occurence = occurence + 1
+        FIN SI
+
+LIRE occurence
+
+SI occurence >0
+ALORS  
+    ECRIRE "La lettre est présente une ou plusieur fois"
+SINON
+        ECRIRE "La lettre n'est pas presente"
+FIN SI
+
+# FIN DU PROGRAMME

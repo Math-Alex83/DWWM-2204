@@ -1,0 +1,43 @@
+# VARIABLES
+
+ENTIER nb1 <-- A
+ENTIER nb2 <-- B
+ENTIER nb3 <-- C
+
+# DEBUT DU PROGRAMME
+
+LIRE nb1
+LIRE nb2
+LIRE nb3
+
+SI nb1 <= nb2
+ALORS
+nbTemp1 <-- nb1
+nbTemp2 <-- nb2
+
+SINON
+nbTemp1 <-- nb2
+nbTemp2 <-- nb1
+
+FIN SI
+
+
+SI nb3 < nbTemp1
+ALORS
+nbTemp3 <-- nbTemp2
+nbTemp2 <-- nbTemp1
+nbTemp1 <-- nb3
+
+OU SI nb3 >= nbTemp2
+ALORS
+nbTemp3 <-- nb3
+
+SINON
+nbTemp3 <-- nbTemp2
+nbTemp2 <-- nb3
+
+FIN SI
+
+ECRIRE "Dans l'ordre Décroissant : " , nbTemp3 , " , " , nbTemp2, " , " , nbTemp1 , " !"
+
+# FIN DU PROGRAMME

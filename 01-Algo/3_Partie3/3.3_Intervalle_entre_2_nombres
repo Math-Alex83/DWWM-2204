@@ -1,0 +1,26 @@
+# VARIABLES
+
+ENTIER nb1 <-- A
+ENTIER nb2 <-- B
+
+
+# DEBUT DU PROGRAMME
+
+LIRE nb1
+LIRE nb2
+
+TANT QUE nb1 != nb2
+    LIRE nb1
+    LIRE nb2
+    SI nb1 < nb2
+    ALORS
+        ECRIRE nb1 + 1 , " , "
+        nb1 <-- nb1 + 1
+    SINON
+        ECRIRE nb1 - 1 , " , "
+        nb1 <-- nb1 - 1
+    FIN SI
+FIN TANT QUE
+
+
+# FIN DU PROGRAMME
