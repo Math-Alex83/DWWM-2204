@@ -1,83 +1,53 @@
+modifier pour demander des choix
+Oui ou non
+
 # VARIABLES
 
 # DEBUT PROGRAMME
 
 SI beau temps
+ALORS
     ECRIRE "Il fait beau je vais me balader en bicyclette"
-        SI velo en bon etat
-            ECRIRE "Mon velo est en bon etat donc je vais me balader imediatement"
+
+    SI velo en bon etat
+    ALORS
+        ECRIRE "Mon velo est en bon etat donc je vais me balader imediatement"
+        FAIRE BALADE EN VELO
+    SINON
+        ECRIRE "Mon velo est en mauvaise etat je doit l'amenner au garage avant d'aller me promener"
+        AMENER VELO AU GARAGE
+
+        SI TEMPS DE REPARATION RAPIDE
+        ALORS
+            ECRIRE "Je me baladerai juste apres les reparations"
             FAIRE BALADE EN VELO
         SINON
-            ECRIRE "Mon velo est en mauvaise etat je doit l'amenner au garage avant d'aller me promener"
-            AMENER VELO AU GARAGE
-                SI TEMPS DE REPARATION RAPIDE
-                    ECRIRE "Je me baladerai juste apres les reparations"
-                    ATTENDRE FIN DES
-                SINON
-                    ECRIRE "Les réparations prendront un moment, je vais donc me promener a pied au lac et ceuillir des joncs"
+            ECRIRE "Les réparations prendront un moment, je vais donc me promener a pied au lac et ceuillir des joncs"
+        FIN SI
+
+    FIN SI
+
 SINON
     ECRIRE "J'aimerai relire le 1er tome de Game of throne"
-        SI LIVRE DANS BIBLIOTHEQUE SALON
-            ECRIRE "Je possede bien ce livre dans ma bibliotheque"
+    SI LIVRE DANS BIBLIOTHEQUE SALON
+        ECRIRE "Je possede bien ce livre dans ma bibliotheque"
+        PRENDRE GAME_OF_THRONE1
+    SINON
+        ECRIRE "Je ne possede pas ce livre, je vais le chercher a la bibliotheque municipale"
+
+        SI LIVRE A LA BIBLIOTHEQUE
+        ALORS
+            ECRIRE "J'emprunte Game of throne 1er tome"
             PRENDRE GAME_OF_THRONE1
         SINON
-            ECRIRE "Je ne possede pas ce livre, je vais le chercher a la bibliotheque municipale"
-                SI LIVRE A LA BIBLIOTHEQUE
-                    ECRIRE "J'emprunte Game of throne 1er tome"
-                    PRENDRE GAME_OF_THRONE1
-                SINON
-                    ECRIRE "Je ne le trouve pas, je vais prendre un roman policier à la place"
-                    PRENDRE ROMAN_POLICIER
-                RENTRER IMMEDIATEMENT
+            ECRIRE "Je ne le trouve pas, je vais prendre un roman policier à la place"
+            PRENDRE ROMAN_POLICIER
+        RENTRER IMMEDIATEMENT
+        FIN SI
     S'INSTALLER CONFORTABLEMENT AU SALON
     LIRE LIVRE
-FIN SI
 
-# FIN PROGRAMME
-
-____________________________________________________________________
-____________________________________________________________________
-
-# VARIABLES
-
-OBJET Livres 
-TABLEAU bibliotheque_salon 
-TABLEAU bibliotheque_municipal
-
-# DEBUT PROGRAMME
-
-SI beau temps
-    ECRIRE "Il fait beau je vais me balader en bicyclette"
-        SI velo en bon etat
-            ECRIRE "Mon velo est en bon etat donc je vais me balader imediatement"
-            Faire_balade_velo
-        SINON
-            ECRIRE "Mon velo est en mauvaise etat je doit l'amenner au garage avant d'aller me promener"
-            Amener_velo_au_garage
-                SI Temps_de_reparation < long
-                    ECRIRE "Je me baladerai juste apres les reparations"
-                    Attendre 
-                    Faire_balade_velo
-                SINON
-                    ECRIRE "Les réparations prendront un moment, je vais donc me promener a pied au lac et ceuillir des joncs"
-        
-SINON
-    ECRIRE "J'aimerai relire le 1er tome de Game of throne"
-        LIRE bibliotheque
-        SI livre(gameOfThroneT1) EST DANS bibliotheque_salon
-            ECRIRE "Je possede bien ce livre dans ma bibliotheque"
-            livres <-- livre(gameOfThroneT1)
-        SINON
-            ECRIRE "Je ne possede pas ce livre, je vais le chercher a la bibliotheque municipale"
-                SI livre(gameOfThroneT1) EST DANS bibliotheque_municipal
-                    ECRIRE "J'emprunte Game of throne 1er tome"
-                    livres <-- livre(gameOfThroneT1)
-                SINON
-                    ECRIRE "Je ne le trouve pas, je vais prendre un roman policier à la place"
-                    livres <-- livre(romanPolicier)
-                Rentrer_immediatement
-    S'installer_confortablement_dans_salon'
-    LIRE livres[0]
+    FIN SI
 FIN SI
 
 # FIN PROGRAMME
