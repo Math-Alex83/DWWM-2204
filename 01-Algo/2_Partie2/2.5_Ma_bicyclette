@@ -12,13 +12,14 @@ STRING livre <-- ""
 
 question <--"Est ce qu'il fait beau aujourd'hui ? (Y/N): "
 FONCTION verification
-
+LIRE condition
 SI validation = true
 ALORS
     ECRIRE "Il fait beau je vais me balader en bicyclette"
 
     question <-- "Le velo est il en bonne etat (Y/N)? : "
     FONCTION verification
+    LIRE condition
     SI validation = true
     ALORS
         ECRIRE "Mon velo est en bon etat donc je vais me balader imediatement."
@@ -27,7 +28,7 @@ ALORS
         ECRIRE "Mon velo est en mauvaise etat je doit l'amenner au garage avant d'aller me promener"
         question <-- "Les réparation seront elle rapide (Y/N)? : "
         FONCTION verification
-
+        LIRE condition
         SI validation = true
         ALORS
             ECRIRE "Je me baladerai juste apres les reparations"
@@ -39,24 +40,22 @@ ALORS
             ECRIRE "Fin du programme !"
         FIN SI
     FIN SI
-
 SINON
     ECRIRE "J'aimerai relire le 1er tome de Game of throne"
-
     question <-- "Ce tome est il dans la bibliotheque de mon salon (Y/N?) : "
     FONCTION verification
+    LIRE condition
     SI validation = true
     ALORS
-        "Super! je vais pouvoir le lire immediatement."
+        ECRIRE "Super! je vais pouvoir le lire immediatement."
         livre <-- "le 1er tôme de Game of throne"
     SINON
         ECRIRE "Je ne possede pas ce livre, je vais le chercher a la bibliotheque municipale"
-        
         ECRIRE " --Se rend a la bibliotheque municipale"
         ECRIRE ". . ."
-
         question <-- "Je suis a la bibliotheque Municipale, Je cherche mais, on-t'il le 1er tôme de Game of throne (Y/N)? : "
         FONCTION verification
+        LIRE condition
         SI validation = true
         ALORS
             ECRIRE "Le voila! Je vais l'emprunter."
@@ -66,22 +65,26 @@ SINON
             livre <-- "les Aventures de Sherlock Holmes"
         ECRIRE " --Rentre immédiatement avec le livre emprunter en poche."
         FIN SI
+        LIRE livre
     ECRIRE "-- s'installe confortablement dans le salon pour lire " + livre +"."
     ECRIRE "Fin du programme !"
-
     FIN SI
 FIN SI
 
 # FIN PROGRAMME
 FONCTION verification
     FAIRE
+    LIRE condition
+    LIRE validation
+    LIRE question
         ECRIRE question
-        SI "N" EST DANS toUpperCase(condition)
+        condition <-- condition.toUpperCase()
+        SI "N" EST DANS condition
         ALORS
             validation <-- false
         FIN SI
 
-        SI "Y" EST DANS toUpperCase(condition)
+        SI "Y" EST DANS condition
         ALORS
             validation <-- true
         FIN SI
