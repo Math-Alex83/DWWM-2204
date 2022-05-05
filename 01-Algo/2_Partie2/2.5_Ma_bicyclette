@@ -72,7 +72,8 @@ SINON
 FIN SI
 
 # FIN PROGRAMME
-FONCTION verification
+
+FONCTION verification ()
     FAIRE
     LIRE condition
     LIRE validation
