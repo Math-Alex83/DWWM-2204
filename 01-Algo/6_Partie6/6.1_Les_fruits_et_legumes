@@ -65,8 +65,10 @@ ________________________________________________________________________________
 ______________________________________________________________________________________
 Exemple en JAVASCRIPT
 
-fruit ="" 
-prix =""
+/*fruit =[]
+prix =[]*/
+fruit =["framboise","pomme","groseille","poire","orange","ananas"]
+prix =[18,2,12,4,5,8]
 saisie =""
 boucle = true
 
@@ -84,34 +86,40 @@ function recuperation_saisie()
 
 function ajout_dans_tableau()
 {
-    saisie = saisie.split()
-    fruit = saisie[0]
-    prix = saisie[1]
-    saisie = ""
+    if(saisie.toUpperCase != "GO")
+    {
+        saisie = saisie.split(" ")
+        fruit.push(saisie[0])
+        prix.push(parseInt(saisie[1]))
+        saisie = ""
+    }
 }
 
 function affichage_fruit_prix()
 {
-    if(saisie.toUpperCase()="GO")
+    if(saisie.toUpperCase()=="GO")
     {
-        for(i=0;i<fruit.length();i++)
+        for(i=0;i<fruit.length;i++)
         {
-            console.log("1 Kilogramme de " + fruit[I] + " coute " + prix[I] + " euros.")
+            console.log("1 Kilogramme de " + fruit[i] + " coute " + prix[i] + " euros.")
         }
-    }
     moins = legume_moins_chere()
-    console.log("Légume le moins cher au kilo : " + fruit[moins])
+    console.log("Fruit/Legume le moins cher au kilo est : " + fruit[moins] + " qui coute " + prix[moins] + "euro(s).")
+    boucle = false
+    }
 }
 
 function legume_moins_chere()
 {
     nbTmp = prix[0]
-    for(element of prix)
+    indexTmp = 0
+    for(i=0;i<prix.length;i++)
     {
-        si(element < nbTmp)
+        if(prix[i] < nbTmp)
         {
-            nbTmp=element
+            nbTmp=prix[i]
+            indexTmp=i
         }
     }
-    return nbTmp
+    return indexTmp
 }
