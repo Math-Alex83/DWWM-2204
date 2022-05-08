@@ -25,4 +25,4 @@ rayon = parseFloat(prompt("Quel est le rayon de la sphere? : " ))
 aire = 4* Math.PI * Math.pow(rayon, 2)
 vol = 4/3 * Math.PI * Math.pow(rayon,3)
 
-alert("L'aire de la sphere est : " + aire + " et le volume est : " + vol)
+alert("L'aire de la sphere est : " + aire.toFixed(2) + " et le volume est : " + vol.toFixed(2))

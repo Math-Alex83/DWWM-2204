@@ -53,7 +53,7 @@ nb2=Math.floor((Math.random() * 100) + 1)
 nb3=Math.floor((Math.random() * 100) + 1)
 nbTmp=0
 
-console.log(nb1 + " " + nb2 + " " + nb3)
+alert(nb1 + " " + nb2 + " " + nb3)
 if(nb1>nb2)
 {
     nbTmp=nb2
@@ -73,4 +73,4 @@ if(nb3<nb1)
     nb2=nb1
     nb1=nbTmp
 }
-console.log("Dans l'ordre Décroissant : " + nb3 + " , " + nb2 + " , " + nb1 + " !")
+alert("Dans l'ordre Décroissant : " + nb3 + " , " + nb2 + " , " + nb1 + " !")

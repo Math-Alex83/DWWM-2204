@@ -45,6 +45,7 @@ tabNB = [128,64,8,512,16,256]
 valeur = 0
 index = 0
 
+alert("Tableau avant le trie : \n" + tabNB)
 while (compteur < tabNB.length)
 {
     valeur = tabNB[compteur]

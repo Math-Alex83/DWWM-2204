@@ -33,7 +33,7 @@ Exemple en JAVASCRIPT
 */
 nb1 = Math.floor((Math.random() * 100) + 1)
 nbTest = 0
-
+alert("Le nombre aleatoire est : " + nb1)
 for(i = 2; i < nb1;i++)
     if(nb1 % i == 0)
     {

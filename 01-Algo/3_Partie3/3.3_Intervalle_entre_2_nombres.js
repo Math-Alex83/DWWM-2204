@@ -31,6 +31,7 @@ Exemple en JAVASCRIPT
 */
 nb1=Math.floor((Math.random() * 20) + 1)
 nb2=Math.floor((Math.random() * 20) + 1)
+alert("Les nombre de départ : " + nb1 + " et " + nb2)
 resultat="" + nb1
 while (nb1 != nb2)
 {

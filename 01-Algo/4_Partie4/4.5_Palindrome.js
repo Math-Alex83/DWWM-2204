@@ -52,12 +52,12 @@ if(mot.length > 2)
 {
 	while(boucle)
 	{
-		if(comptDebut < comptFin &&  mot[comptDebut].topUpperCase == mot[comptFin].topUpperCase)
+		if(comptDebut < comptFin && mot[comptDebut].toUpperCase() == mot[comptFin].toUpperCase())
 		{
 			comptDebut ++
             comptFin --	
 		}
-		else if(comptDebut >= comptFin)
+		else if(comptDebut >= comptFin && mot[comptDebut].toUpperCase() == mot[comptFin].toUpperCase())
 		{
 			console.log(mot + " est un palindrome.")
           	boucle=false

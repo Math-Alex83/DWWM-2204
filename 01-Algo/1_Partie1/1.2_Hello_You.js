@@ -23,7 +23,7 @@ pr = prompt("Quel est votre prenom?: ")
 
 alert("Bonjour " + pr)
 
-alert("Appuyez sur une touche pour quitter") 
+alert("Appuyez sur OK pour quitter") 
 
 console.log("Fin du programme !")
 

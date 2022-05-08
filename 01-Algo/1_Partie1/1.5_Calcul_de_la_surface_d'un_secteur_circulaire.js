@@ -27,4 +27,4 @@ angle = parseFloat(prompt("Quel est l'angle du secteur circulaire? (en degré(s)
 
 aire = (Math.PI * Math.pow(rayon,2) * angle) / 360
 
-alert("L'aire du secteur circulaire est : " + aire)
+alert("L'aire du secteur circulaire est : " + aire.toFixed(2))
