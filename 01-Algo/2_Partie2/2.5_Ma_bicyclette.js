@@ -78,6 +78,7 @@ FONCTION verification ()
     LIRE question
         ECRIRE question
         condition <-- condition.toUpperCase()
+        LIRE condition
         SI "N" EST DANS condition
         ALORS
             validation <-- false

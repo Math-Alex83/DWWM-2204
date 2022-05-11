@@ -34,11 +34,11 @@ consonne = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V",
 voyelle = ["A","E","I","O","U","Y"]
 chiffre = ["0","1","2","3","4","5","6","7","8","9"]
 compteur = [0,0,0,0]
-texte="Ossecour1234 haha"
+text = "Les Hippocampes (Hippocampus), du grec ἵππος, híppos, « cheval », et de κάμπος, kámpos, « poisson marin »1, aussi appelés familièrement chevaux de mer, sont un genre de poissons à nageoires rayonnées de la famille des Syngnathidae. Une cinquantaine d'espèces se répartissent dans les eaux tempérées et tropicales partout dans le monde. Comme beaucoup de poissons, ils souffrent de la destruction de leur habitat et de la surpêche2 liée au braconnage3."
 resultat=""
 texte = texte.toUpperCase()
 
-if (texte.length > 2)
+if (texte.length > 100)
 {
         for (var e of texte)
         {

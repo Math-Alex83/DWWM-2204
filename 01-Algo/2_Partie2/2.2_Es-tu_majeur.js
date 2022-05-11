@@ -32,7 +32,7 @@ if(age >= 18)
 {
     alert("Vous etes majeur !")
 }
-else if (age >= 0 && age <18)
+else if (age >= 0)
 {
     alert("Vous etes mineur !")
 }
