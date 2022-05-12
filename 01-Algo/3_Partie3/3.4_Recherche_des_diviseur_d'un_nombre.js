@@ -49,3 +49,18 @@ while(div >1)
     div--
 }
 alert("Le(s) diviseur(s) de " + nb1 + " : \n" + resultat)
+
+
+
+nombre=prompt("Entrez un nombre entier positif :")
+tab=[30,50,80,100,120]
+compteur=0
+while(tab[compteur]!=nombre||compteur>tab.length){
+    if(tab[compteur]==nombre){
+        alert("Le nombre est dans le tableau")
+    }
+    else{
+        alert("Le nombre n'est pas dans le tableau")
+    }
+    compteur++
+}
