@@ -48,28 +48,41 @@ comptDebut = 0
 comptFin = mot.length-1
 
 
-if(mot.length > 2)
+if(mot.length > 1)
 {
 	while(boucle)
 	{
+		while((mot[comptDebut]==" " || mot[comptFin]==" ") && comptDebut < comptFin)
+		{
+			if(mot[comptDebut]==" ")
+			{
+				comptDebut++
+			}
+			if(mot[comptFin]==" ")
+			{
+				comptFin--
+			}
+		}
+    alert(mot[comptDebut] + " = " + mot[comptFin])
 		if(comptDebut < comptFin && mot[comptDebut].toUpperCase() == mot[comptFin].toUpperCase())
 		{
 			comptDebut ++
-            comptFin --	
+      comptFin --	
 		}
 		else if(comptDebut >= comptFin && mot[comptDebut].toUpperCase() == mot[comptFin].toUpperCase())
 		{
-			console.log(mot + " est un palindrome.")
+			alert(mot + " est un palindrome.")
           	boucle=false
 		}
 		else
 		{
-			console.log(mot + " n'est pas un palindrome.")
+			alert(mot + " n'est pas un palindrome.")
             boucle=false
 		}
 	}
 }
 else
 {
-	console.log("Ecrire un mot d'au moins 3 caracteres")
+	alert("Ecrire un mot d'au moins 2 caracteres")
 }
+
